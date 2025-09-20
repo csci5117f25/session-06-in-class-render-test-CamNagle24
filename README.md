@@ -8,7 +8,8 @@ We will go over steps in lecture. You should fill out the following:
 
 
 ## What commands starts the server?
-
+pipenv install
+pipenv run flask --app server.py run
 
 ## Before render
 
