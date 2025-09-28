@@ -14,5 +14,19 @@
 {% if name %}
 <h2>and hello to {{name}}</h2>
 {% endif %}
+
+<h2>Sign in to the guestbook!</h2>
+<form method="post" action="/guestbook">
+    <input type="text" name="guest_name" placeholder="Your Name">
+    <input type="text" name="guest_message" placeholder="Your Message">
+    <button type="submit"></button>
+</form>
+
+<h2>Guest List</h2>
+<ol>
+    {% for g in guests %}
+    <li>{{ g.guest_name }}: {{ g.guest_message }}</li>
+    {% endfor %}
+</ol>
 </body>
 </html>
